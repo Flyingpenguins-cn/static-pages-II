@@ -1,0 +1,1411 @@
+<!--
+    项目：模仿腾讯视频网站 
+    时间：2020-11-14
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聚好播视频 - 全网在线视频媒体平台,海量高清视频在线观看</title>
+    <link rel="icon" type="image/png" href="image/s_logo.png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/js.js"></script>
+</head>
+<body>
+    <!--顶部导航栏开始-->
+    <div class="side_hied" id="side_hied">
+        <div class="side_logo">
+            <!--width="270px" height="72px"-->
+            <a href="#"><img src="image/聚好播logo.png" alt="聚好播" width="200px" height="52px" ></a>
+        </div>
+        <div class="search_keywords">
+            <input type="text" value="全职高手 第2季">
+            <a href="#" class="a_hot">
+                <svg class="svg_icon_fire" width="12" height="15" viewBox="0 0 12 15">
+                    <linearGradient x1="41.309%" y1="32.314%" x2="71.734%" y2="100%" id="__gradient_fire">
+                    <stop stop-color="#FF9630" offset="0%"></stop>
+                    <stop stop-color="#FF9630" offset="0%"></stop>
+                    <stop stop-color="#FF1E1E" offset="100%"></stop>
+                    </linearGradient>
+                    <path d="M6.634 17C2.539 14.21 1.905 10.843 4.73 6.898 6.307 4.845 7.253 4.053 7.253 2c.353.183 5.134 2.569 4.024 7.5 1.01-.505 1.684-1.659 2.025-3.463 2.28 3.767 2.264 6.9-.051 9.4-.489.528-1.211 1.05-1.873 1.563-1.33-.625-2.932-1.875-3.573-5.625C6.524 12.833 6.133 14.708 6.634 17z" fill="url(#__gradient_fire)" transform="translate(-3 -2)"></path>
+                </svg>
+                <span>热搜榜</span>
+                
+            </a>
+            <button class="search_btn">
+                <a href="#">
+                    <!-- <svg class="svg_icon svg_icon_search" viewBox="0 0 18 18" width="18" height="18" viewBox="0 0 18 18">
+                        <path d="M4.5 4.5c-1.9 1.9-1.9 5.1 0 7.1s5.1 1.9 7.1 0 1.9-5.1 0-7.1-5.2-2-7.1 0zm10.8 12.2l-3.1-3.1c-2.7 2-6.6 1.9-9.1-.6C.3 10.2.3 5.8 3 3 5.7.3 10.2.3 12.9 3c2.5 2.5 2.7 6.4.6 9.1l3.1 3.1c.4.4.4 1 0 1.4-.3.5-.9.5-1.3.1z" fill="currentColor"></path>
+                    </svg> -->
+                    <img src="image/magnifying glass2.png" alt="全网搜" width="26px" height="22px">
+                    <span>全网搜</span> 
+                </a>
+            </button>
+
+        </div>
+        <!--快速导航栏开始-->
+        <div class="mod_quick">
+            <div class="quick_vip">
+                <a href="#" title="vip会员">
+                        <img src="image/vip.png" alt="vip">
+                </a>
+            </div>
+            <div class="quick_history">
+                <a href="#" title="历史记录">
+                    <img src="image/history.png" alt="history" width="23px" height="23px">
+                </a>
+            </div>
+            <div class="quick_upload">
+                <a href="#" title="下载管理">
+                    <img src="image/upload.png" alt="upload">
+                </a>
+            </div>
+            <div class="quick_client">
+                <a href="#" title="客户端">
+                    <img src="image/client.png" alt="client">
+                </a>
+            </div>
+            <div class="quick_user">
+                <a href="#" title="用户">
+                    <img src="image/user.png" alt="user" style="border-radius: 25px;">
+                </a>
+            </div>
+        </div>
+        <!--快速导航栏结束-->
+    </div>
+    <!--顶部导航栏结束-->
+
+    <!--快速导航栏隐藏浮层开始-->
+    <div class="mod_quick_float">
+        <div class="quick_vip_pop"></div>
+        <!--history播放浮层-->
+        <div class="quick_history_pop" style="border-top-right-radius: 25px;">
+            <li >
+                <a class="checked" href="#" style="border-top-left-radius: 15px;">看过</a> 
+            </li>
+            <li>
+                <a href="#">收藏</a> 
+            </li>
+            <li>
+                <a href="#" style="border-top-right-radius: 15px;">关注</a> 
+            </li>
+            <div>
+                <div class="quick_history_pop_haveseen" >0</div>
+                <div class="quick_history_pop_collect" style="display: none;">1</div>
+                <div class="quick_history_pop_attention" style="display: none;">2</div>
+            </div>
+
+        </div>
+        <div class="quick_upload_pop"></div>
+        <!--client播放浮层-->
+        <div class="quick_client_pop" >
+            <li>
+                <img src="image/HD.png" alt="HD">
+                <a href="#">1080p蓝光画质</a> 
+            </li>
+            <li>
+                <img src="image/lightning.png" alt="lightning">
+                <a href="#">三倍流程播放</a> 
+            </li>
+            <li>
+                <img src="image/4K.png" alt="4K">
+                <a href="#">4k超清体验</a> 
+            </li>
+            <button><a href="#" style="display: block;">立即体验</a></button>
+        </div>
+        <!--user播放浮层-->
+        <div class="quick_user_pop" >
+            <div class="quick_user_pop_hd">
+                <li style="float: none; text-align: left;">登入之后可以</li>
+                <li style="float: left;">开通vip/超级影视vip 看大片</li>
+                <button><a href="#">开通</a></button>
+            </div>
+            <div class="quick_user_pop_bd">
+                <li>
+                    <a href="#">
+                        <img src="image/评论消息.png" alt="评论消息">
+                        评论消息
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="image/云同步观看记录.png" alt="评论消息">
+                        云同步观看记录
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="image/创作中心.png" alt="评论消息">
+                        创作中心
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="image/用客户端卡抢vip.png" alt="评论消息">
+                        用客户端卡抢vip
+                    </a>
+                </li>
+                <button class="quick_user_pop_bd_loginbtn"><a href="#" style="display: block;">立即登入</a></button>
+            </div>
+        </div>
+    </div>
+    <!--快速导航栏隐藏浮层结束-->
+
+    <!--大家在看 横向列表隐藏浮层 开始-->
+    <div class="site_slider_inner">
+        <a href="#" ></a>
+        <div class="site_slider_figure" style="display: none;">
+            <a href="">
+                <div class="slider_figure_vidio"></div>
+                <div class="slider_figure_catpion"></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+            <a href="">
+                <div></div>
+                <div></div>
+            </a>
+        </div>
+    </div>
+    <!--大家在看 横向列表隐藏浮层 结束-->
+
+    <!--banner导航列表（大家在看），（重磅推荐）与轮播列表 开始-->
+    <div class="site_slider_nav">
+        <ul class="site_slider_nav_list1">
+            <h1>
+                <img src="image/大家在看.png" alt="大家在看" style="width: 19px;height: 12px;">
+                <a href="">大家在看</a>
+            </h1> 
+        </ul>
+        <hr class="site_slider_nav_hr">
+        <ul class="site_slider_nav_list2">
+            <h1>
+                <img src="image/fire.png" alt="fire" style="width: 16px;height: 20px;">
+                <a href="">重磅推荐</a> 
+            </h1> 
+            <li><a href="" class="site_slider_nav_list2_uncheacked">双龙记之和平契约</a><p>双龙记的和平契约</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">燕云台</a><p>唐嫣回归之作</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">和平精英国际冠军赛</a><p>代言人空降盛典</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">花木兰</a><p>刘亦菲超飒演绎巾帼女英雄</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">哈哈哈哈哈</a><p>邓超忽悠黄渤反被坑</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">隐秘而伟大</a><p>李易峰金晨乱世蜕变</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">硬糖少女303首唱会</a><p>20点绝美开唱</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">正直播KPL秋季赛</a><p>TTG对决DYG</p> </li>
+            <li><a href="" class="site_slider_nav_list2_uncheacked">神奇公司在哪里</a><p>杨超越翟潇闻改编主题曲</p> </li>
+        </ul>
+    </div>
+    <!--banner导航列表与轮播列表 结束-->
+
+    <!--网页顶部结束（包含banner）-->
+
+    <!--网页主体 main 开始-->
+    <div class="main">
+        <div class="mod_main_nav">
+            <div class="mod_main_nav0">
+
+                <div class="mod_main_nav0_block1">
+                    <a href="" style="width: 70px; font-weight: 800;margin-left:20px; color: #000;">
+                        <img src="image/mod_main_nav0_block1/0.png" alt="电视剧" width="18px" height="18px">
+                        电视剧
+                        
+                    </a>
+                    <span></span>
+                    <a href="">海外剧</a>
+                    <a href="">网络剧</a>
+                </div>
+
+                <div class="mod_main_nav0_block2">
+                    <a href="" style="width: 70px; font-weight: 800;margin-left:20px; color: #000;">
+                        <img src="image/mod_main_nav0_block1/1.png" alt="电影" width="18px" height="18px">
+                        电影
+                    </a>
+                    <span></span>
+                    <a href="">院线大片</a>
+                    <a href="">自制电影</a>
+                </div>
+                <div class="mod_main_nav0_poparea1" style="display: none;"><!-- 隐藏浮层 -->
+                    <div>
+                        <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部电视剧</a>
+                    </div>
+                    <div>
+                        <a href="">焕脸</a>
+                        <a href="">狼殿下</a>
+                        <a href="">今夕何夕</a>
+                        <a href="">浪花男神</a>
+                        <a href="">爱的厘米</a>
+                        <a href="">好想和你在一起</a>
+                        <a href="">石头开花</a>
+                        <a href="">最好的时代</a>
+                        <a href="">燕云台</a>
+                        <a href="">隐秘而伟大</a>
+                        <a href="">九流霸主</a>
+                        <a href="">北国英雄</a>
+                        <a href="">使徒行者3</a>
+                        <a href="">瞄准</a>
+                        <a href="">越过山丘</a>
+                    </div>
+                    <div class="mod_main_nav0_poparea1_after"></div>
+                </div>
+                <div class="mod_main_nav0_poparea2" style="display: none;">
+                    <div>
+                        <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部电影</a>
+                    </div>
+                    <div>
+                        <a href="">焕脸</a>
+                        <a href="">狼殿下</a>
+                        <a href="">今夕何夕</a>
+                        <a href="">浪花男神</a>
+                        <a href="">爱的厘米</a>
+                        <a href="">好想和你在一起</a>
+                        <a href="">石头开花</a>
+                        <a href="">最好的时代</a>
+                        <a href="">燕云台</a>
+                        <a href="">隐秘而伟大</a>
+                        <a href="">九流霸主</a>
+                        <a href="">北国英雄</a>
+                        <a href="">使徒行者3</a>
+                        <a href="">瞄准</a>
+                        <a href="">越过山丘</a>
+                    </div>
+                    <div class="mod_main_nav0_poparea2_after"></div>
+                </div>
+            </div>
+            <div class="mod_main_nav1">
+                <div class="mod_main_nav1_block1">
+                    <a href="" style="width: 70px; font-weight: 800;margin-left:20px; color: #000;">
+                        <img src="image/mod_main_nav1_block1/0.png" alt="电视剧" width="18px" height="18px">
+                        综艺
+                        
+                    </a>
+                    <span></span>
+                    <a href="">腾讯自制</a>
+                    <a href="">独播</a>
+                </div>
+                <div class="mod_main_nav1_block2">
+                    <a href="" style="width: 70px; font-weight: 800;margin-left:20px; color: #000;">
+                        <img src="image/mod_main_nav1_block1/1.png" alt="电影" width="18px" height="18px">
+                        动漫
+                    </a>
+                    <span></span>
+                    <a href="">国漫</a>
+                    <a href="">日漫</a>
+                </div>
+                <div class="mod_main_nav1_poparea1" style="display: none;">
+                    <div>
+                        <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部电视剧</a>
+                    </div>
+                    <div>
+                        <a href="">焕脸</a>
+                        <a href="">狼殿下</a>
+                        <a href="">今夕何夕</a>
+                        <a href="">浪花男神</a>
+                        <a href="">爱的厘米</a>
+                        <a href="">好想和你在一起</a>
+                        <a href="">石头开花</a>
+                        <a href="">最好的时代</a>
+                        <a href="">燕云台</a>
+                        <a href="">隐秘而伟大</a>
+                        <a href="">九流霸主</a>
+                        <a href="">北国英雄</a>
+                        <a href="">使徒行者3</a>
+                        <a href="">瞄准</a>
+                        <a href="">越过山丘</a>
+                    </div>
+                    <div class="mod_main_nav1_poparea1_after"></div>
+                </div>
+                <div class="mod_main_nav1_poparea2" style="display: none;">
+                    <div>
+                        <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部电视剧</a>
+                    </div>
+                    <div>
+                        <a href="">焕脸</a>
+                        <a href="">狼殿下</a>
+                        <a href="">今夕何夕</a>
+                        <a href="">浪花男神</a>
+                        <a href="">爱的厘米</a>
+                        <a href="">好想和你在一起</a>
+                        <a href="">石头开花</a>
+                        <a href="">最好的时代</a>
+                        <a href="">燕云台</a>
+                        <a href="">隐秘而伟大</a>
+                        <a href="">九流霸主</a>
+                        <a href="">北国英雄</a>
+                        <a href="">使徒行者3</a>
+                        <a href="">瞄准</a>
+                        <a href="">越过山丘</a>
+                    </div>
+                    <div class="mod_main_nav1_poparea2_after"></div>
+                </div>
+            </div>
+            <div class="mod_main_nav2">                
+                <div class="mod_main_nav2_block1">
+                    <a href="" style="width: 70px; font-weight: 800;margin-left:20px; color: #000;">
+                    <img src="image/mod_main_nav2_block1/0.png" alt="电视剧" width="18px" height="18px">
+                    少儿
+                    
+                    </a>
+                    <span></span>
+                    <a href="">益智</a>
+                    <a href="">儿歌</a>
+                </div>
+                <div class="mod_main_nav2_block2">
+                    <a href="" style="width: 70px; font-weight: 800;margin-left:20px; color: #000;">
+                        <img src="image/mod_main_nav2_block1/1.png" alt="电影" width="18px" height="18px">
+                        纪录片
+                    </a>
+                    <span></span>
+                    <a href="">美食</a>
+                    <a href="">自然</a>
+                </div>
+                <div class="mod_main_nav2_poparea1" style="display: none;">
+                    <div>
+                        <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部电视剧</a>
+                    </div>
+                    <div>
+                        <a href="">焕脸</a>
+                        <a href="">狼殿下</a>
+                        <a href="">今夕何夕</a>
+                        <a href="">浪花男神</a>
+                        <a href="">爱的厘米</a>
+                        <a href="">好想和你在一起</a>
+                        <a href="">石头开花</a>
+                        <a href="">最好的时代</a>
+                        <a href="">燕云台</a>
+                        <a href="">隐秘而伟大</a>
+                        <a href="">九流霸主</a>
+                        <a href="">北国英雄</a>
+                        <a href="">使徒行者3</a>
+                        <a href="">瞄准</a>
+                        <a href="">越过山丘</a>
+                    </div>
+                    <div class="mod_main_nav2_poparea1_after"></div>
+                </div>
+                <div class="mod_main_nav2_poparea2" style="display: none;">
+                    <div>
+                        <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部电视剧</a>
+                    </div>
+                    <div>
+                        <a href="">焕脸</a>
+                        <a href="">狼殿下</a>
+                        <a href="">今夕何夕</a>
+                        <a href="">浪花男神</a>
+                        <a href="">爱的厘米</a>
+                        <a href="">好想和你在一起</a>
+                        <a href="">石头开花</a>
+                        <a href="">最好的时代</a>
+                        <a href="">燕云台</a>
+                        <a href="">隐秘而伟大</a>
+                        <a href="">九流霸主</a>
+                        <a href="">北国英雄</a>
+                        <a href="">使徒行者3</a>
+                        <a href="">瞄准</a>
+                        <a href="">越过山丘</a>
+                    </div>
+                    <div class="mod_main_nav2_poparea2_after"></div>
+                </div>
+            </div>
+            <span></span>
+            <div class="mod_main_nav3">
+                <div class="mod_main_nav3_div0">
+                    <a href="">VIP会员</a>
+                    <a href="">音乐</a>
+                    <div class="mod_main_nav3_poparea_VIP"></div>
+                    <div class="mod_main_nav3_poparea_music">
+                        <div>
+                            <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部音乐</a>
+                        </div>
+                        <div>
+                            <a href="">焕脸</a>
+                            <a href="">狼殿下</a>
+                            <a href="">今夕何夕</a>
+                            <a href="">浪花男神</a>
+                            <a href="">爱的厘米</a>
+                            <a href="">好想和你在一起</a>
+                            <a href="">石头开花</a>
+                            <a href="">最好的时代</a>
+                            <a href="">燕云台</a>
+                            <a href="">隐秘而伟大</a>
+                            <a href="">九流霸主</a>
+                            <a href="">北国英雄</a>
+                            <a href="">使徒行者3</a>
+                            <a href="">瞄准</a>
+                            <a href="">越过山丘</a>
+                        </div>
+                        <div class="mod_main_nav3_poparea_after"></div>
+                    </div>
+                </div>
+                <div class="mod_main_nav3_div1">
+                    <a href="">知识</a>
+                    <a href="">娱乐</a>
+                    <div class="mod_main_nav3_poparea_knowledge">
+                        <div>
+                            <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部知识</a>
+                        </div>
+                        <div>
+                            <a href="">焕脸</a>
+                            <a href="">狼殿下</a>
+                            <a href="">今夕何夕</a>
+                            <a href="">浪花男神</a>
+                            <a href="">爱的厘米</a>
+                            <a href="">好想和你在一起</a>
+                            <a href="">石头开花</a>
+                            <a href="">最好的时代</a>
+                            <a href="">燕云台</a>
+                            <a href="">隐秘而伟大</a>
+                            <a href="">九流霸主</a>
+                            <a href="">北国英雄</a>
+                            <a href="">使徒行者3</a>
+                            <a href="">瞄准</a>
+                            <a href="">越过山丘</a>
+                        </div>
+                        <div class="mod_main_nav3_poparea_after"></div>
+                    </div>
+                    <div class="mod_main_nav3_poparea_amusement">
+                        <div>
+                            <a href="" style="color: #FF4524;margin: 0px;font-size: 14px;">全部娱乐</a>
+                        </div>
+                        <div>
+                            <a href="">焕脸</a>
+                            <a href="">狼殿下</a>
+                            <a href="">今夕何夕</a>
+                            <a href="">浪花男神</a>
+                            <a href="">爱的厘米</a>
+                            <a href="">好想和你在一起</a>
+                            <a href="">石头开花</a>
+                            <a href="">最好的时代</a>
+                            <a href="">燕云台</a>
+                            <a href="">隐秘而伟大</a>
+                            <a href="">九流霸主</a>
+                            <a href="">北国英雄</a>
+                            <a href="">使徒行者3</a>
+                            <a href="">瞄准</a>
+                            <a href="">越过山丘</a>
+                        </div>
+                        <div class="mod_main_nav3_poparea_after"></div>
+                    </div>
+                </div>
+                <div class="mod_main_nav3_div2">
+                    <a href="">生活</a>
+                    <a href="">新闻</a>
+                </div>
+                <div class="mod_main_nav3_div3">
+                    <a href="">游戏</a>
+                    <a href="">S10</a>
+                </div>            
+                <div class="mod_main_nav3_div4">
+                    <a href="">艺术</a>
+                    <a href="">爱看</a>
+                </div>
+                <div class="mod_main_nav3_div5">
+                    <a href="">教育</a>
+                    <a href="">时尚</a>
+                </div>
+                <div class="mod_main_nav3_div6">
+                    <a href="">科技</a>
+                    <a href="">旅游</a>
+                </div>
+                <div class="mod_main_nav3_div7">
+                    <a href="">汽车</a>
+                    <a href="">更多</a>
+                </div>
+            </div>
+            <span></span>
+            <div class="mod_main_feature">
+                <a href="" class="mod_main_feature_a1">
+                    <img class="mod_main_feature_a1_img1" src="image/mod_main_feature/0.png" alt="应用中心" width="66px" height="57.6px" style="margin-left: 5px;">
+                    <img class="mod_main_feature_a1_img2"  src="image/mod_main_feature/1.png" alt="应用中心" width="82px" height="16px">
+                </a>
+                <a href="" class="mod_main_feature_a2">
+                    <img class="mod_main_feature_a2_img1" src="image/mod_main_feature/2.png" alt="VIP影视" width="66px" height="57.6px" style="margin-left: 5px;">
+                    <img class="mod_main_feature_a2_img2" src="image/mod_main_feature/3.png" alt="VIP影视" width="82px" height="16px">
+                </a>
+            </div>
+        </div>
+        
+        <div class="mod_row_box">
+            <div class="mod_row_box1_hd">
+                <h1>今日热门</h1>
+                <a href="">开VIP+联合会员，限量再领一次VIP</a>
+                <div class="mod_row_box1_hd_smallpage">
+                    <button class="mod_row_box1_hd_smallpage_lastbtn"><img src="image/mod_row_box1_hd/0.png" alt="" width="7px" height="10px"> </button>
+                    <span class="mod_row_box1_hd_smallpage_pagenum" data-count="4" data-page="1"></span>
+                    <button class="mod_row_box1_hd_smallpage_nexsdzxtbtn"><img src="image/mod_row_box1_hd/1.png" alt="" width="7px" height="10px"></button>
+                </div>
+            </div>
+            <div class="mod_row_box1_bd">
+                <!--page1-->
+                <div class="mod_row_box1_bd_div0">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">四川和西藏微博上“打”起来了？只因一个人</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div1">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">2021年拼假攻略！元旦清明五一都可拼9天假</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div2">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">山西发现进口青虾外包装核酸呈阳性，开展溯源追踪</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div3">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">网红天鹅相亲两次没成功 与饲养员同吃同睡</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div4" >
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">迷妹专访：杨芸晴在线飙戏，演绎无实物大片</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div5" >
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狼殿下》主题曲MV上线，蔡依林携手Jony J</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div6">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">《丁真的世界》首发！丁真为家乡四川拍摄超燃宣传片</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div7">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">这老外太牛了！不仅深谙中国文化还能鉴宝</a>
+                    </div>
+                </div>
+                <!--page2-->
+                <div class="mod_row_box1_bd_div8" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">白雪公主抓娃娃挑战！博士汪的玩具手办不翼而飞？</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div9" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">杨紫一口气说20分钟台词，妥妥实力派演员</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div10" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">嫦娥五号探测器最新动态：已顺利完成第一次轨道修正</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div11" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">在圆明园邂逅北京初雪，感受大水法厚重之美</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div12" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">新疆快递员雪地骑马送快递：骑马来的不只王子</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div13" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">孟子义遭郭敬明痛批网红脸？为何路人缘这么差？</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div14" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">5分钟Get江西不一样的美！</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div15" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">在日本主场把日本选手打得抱头痛哭，许昕够狠、够浪！</a>
+                    </div>
+                </div>
+                <!--page3-->
+                <div class="mod_row_box1_bd_div16" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">经纪人痛批星女郎鄂靖文：艺人不营业就是不敬业!</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div17" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">动画趣味解读来了！当民法典遇上《四大名著》</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div18" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">LAYERS ——帕格尼尼-La Campanella（钟）</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div19" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">莎拉布莱曼-Just Show Me How to Love You</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div20" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">Simply Three组合——《Someone You Love》</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div21" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">一段忘年之恋</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div22" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狐妖小红娘等了五年的最虐CP恋上线</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div23" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">阴阳美人棺美娜化身谲美蛇王妃</a>
+                    </div>
+                </div>
+                <!--page4-->
+                <div class="mod_row_box1_bd_div24" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狼殿下·蔡依林主题曲MV遇见你，我才知道我是谁</a>
+                    </div>
+                 </div>
+                <div class="mod_row_box1_bd_div25" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">切尔诺贝利豆瓣9.6 灾难神作</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div26" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">守望者[会员看全集] HBO高口碑佳作DC漫改剧</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div27" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">西部世界3[会员看全集]人工智能终极复仇</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div28" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">向着宵夜的方向·30日播忙了一天，吃点吧！</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div29" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">燃点·创战到底记录正在发生的创业史</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div30" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">西泠印社·涨知识百年名社 一代宗师</a>
+                    </div>
+                </div>
+                <div class="mod_row_box1_bd_div31" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">城市梦 一场博弈 谁的梦想？</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod_row_box">
+            <div class="mod_row_box2_hd">
+                <h1>原创精选</h1>
+                <a href=""><img src="image/mod_row_box2_hd/0.png" alt="" width="22px" height="22px"> 张文宏医生</a>
+                <a href=""><img src="image/mod_row_box2_hd/1.png" alt="" width="22px" height="22px"> 跳绳托尼酱</a>
+                <a href=""><img src="image/mod_row_box2_hd/2.png" alt="" width="22px" height="22px"> 鹅老师课堂</a>
+                <a href=""><img src="image/mod_row_box2_hd/3.png" alt="" width="22px" height="22px"> xgs小松</a>
+                <a href=""><img src="image/mod_row_box2_hd/4.png" alt="" width="22px" height="22px"> 峨眉传奇官方</a>
+                <div class="mod_row_box2_hd_smallpage">
+                    <button class="mod_row_box2_hd_smallpage_lastbtn"><img src="image/mod_row_box1_hd/0.png" alt="" width="7px" height="10px"> </button>
+                    <span class="mod_row_box2_hd_smallpage_pagenum" data-count="4" data-page="1"></span>
+                    <button class="mod_row_box2_hd_smallpage_nexsdzxtbtn"><img src="image/mod_row_box1_hd/1.png" alt="" width="7px" height="10px"></button>
+                </div>
+            </div>
+            <div class="mod_row_box2_bd">
+                <!--page1-->
+                <div class="mod_row_box2_bd_div0">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狼殿下·蔡依林主题曲MV遇见你，我才知道我是谁</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div1">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">2021年拼假攻略！元旦清明五一都可拼9天假</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div2">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">山西发现进口青虾外包装核酸呈阳性，开展溯源追踪</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div3">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">网红天鹅相亲两次没成功 与饲养员同吃同睡</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div4" >
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">迷妹专访：杨芸晴在线飙戏，演绎无实物大片</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div5" >
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狼殿下》主题曲MV上线，蔡依林携手Jony J</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div6">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">《丁真的世界》首发！丁真为家乡四川拍摄超燃宣传片</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div7">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">这老外太牛了！不仅深谙中国文化还能鉴宝</a>
+                    </div>
+                </div>
+                <!--page2-->
+                <div class="mod_row_box2_bd_div8" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">白雪公主抓娃娃挑战！博士汪的玩具手办不翼而飞？</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div9" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">杨紫一口气说20分钟台词，妥妥实力派演员</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div10" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">嫦娥五号探测器最新动态：已顺利完成第一次轨道修正</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div11" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">在圆明园邂逅北京初雪，感受大水法厚重之美</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div12" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">新疆快递员雪地骑马送快递：骑马来的不只王子</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div13" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">孟子义遭郭敬明痛批网红脸？为何路人缘这么差？</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div14" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">5分钟Get江西不一样的美！</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div15" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">在日本主场把日本选手打得抱头痛哭，许昕够狠、够浪！</a>
+                    </div>
+                </div>
+                <!--page3-->
+                <div class="mod_row_box2_bd_div16" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">经纪人痛批星女郎鄂靖文：艺人不营业就是不敬业!</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div17" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">动画趣味解读来了！当民法典遇上《四大名著》</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div18" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">LAYERS ——帕格尼尼-La Campanella（钟）</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div19" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">莎拉布莱曼-Just Show Me How to Love You</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div20" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">Simply Three组合——《Someone You Love》</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div21" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">一段忘年之恋</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div22" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狐妖小红娘等了五年的最虐CP恋上线</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div23" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">阴阳美人棺美娜化身谲美蛇王妃</a>
+                    </div>
+                </div>
+                <!--page4-->
+                <div class="mod_row_box2_bd_div24" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">狼殿下·蔡依林主题曲MV遇见你，我才知道我是谁</a>
+                    </div>
+                 </div>
+                <div class="mod_row_box2_bd_div25" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">切尔诺贝利豆瓣9.6 灾难神作</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div26" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">守望者[会员看全集] HBO高口碑佳作DC漫改剧</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div27" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">西部世界3[会员看全集]人工智能终极复仇</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div28" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">向着宵夜的方向·30日播忙了一天，吃点吧！</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div29" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">燃点·创战到底记录正在发生的创业史</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div30" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">西泠印社·涨知识百年名社 一代宗师</a>
+                    </div>
+                </div>
+                <div class="mod_row_box2_bd_div31" style="display: none;">
+                    <a href="">
+                        <span></span>
+                        <div>01:08</div>
+                    </a>
+                    <div>
+                        <a href="">城市梦 一场博弈 谁的梦想？</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mod_row_box">
+            
+        </div>
+
+        <div class="x_fixed_tool">
+            <div>
+                <a href="">
+                    <img src="image/x_fixed_tool/礼物盒.png" alt="礼物盒" width="36px" height="36px">
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="image/x_fixed_tool/反馈.png" alt="反馈"  width="36px" height="36px">
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="image/x_fixed_tool/下载.png" alt="下载"  width="36px" height="36px">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="image/x_fixed_tool/回到顶部.png" alt="回到顶部"  width="36px" height="36px">
+                </a>
+            </div>
+        </div>
+        <!-- 登入注册隐藏浮层下的蒙版层-------------------------------------  -->
+        <div class="mask_layer" style="display: none;"></div>
+        <!-- 登入注册隐藏浮层------------------------------------- s -->
+        <div class="login_win" style="display: none;">
+            <a href=""></a>
+            <div class="login_win_tab">
+                <ul class="login_win_tab_list">
+                    <li class="login_win_tab_list_li1">
+                        <a href="#" class="login_win_tab_list_li1_checked">
+                            <img src="" alt="">
+                            <span>QQ账号登入</span>
+                        </a>
+                    </li>
+                    <li class="login_win_tab_list_li2">
+                        <a href="#" class="login_win_tab_list_li1_unchecked">
+                            <img src="" alt="">
+                            <span>微信账号登入</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="login_win_tab_close"><a href=""> </a></div>
+            </div>
+            <div class="login_win_tips">
+                <div class="login_win_tips_txt">微信和QQ是两个独立账号，账号信息不互通</div>
+                <div class="login_win_tips_notes">登录后高清播放更流畅</div>
+            </div>
+            <div class="login_win_cont">
+                <div class="login_win_cont_qq">
+                    <div class="login_win_cont_qq_left1">
+                        <div class="login_win_cont_qq_left1_div1">
+                            <div style="font-size: 20px;">帐号密码登录</div>
+                            <div style="font-size: 14px;">推荐使用 <a href="#" class="login_win_cont_qq_left2_div1_quickregister" >快速安全登录</a> ，防止盗号。</div>
+                            <input type="text" value="支持QQ号/邮箱/手机号登入">
+                            <input type="text" value="密码">
+                            <button> <a href="">授权并登录</a></button>
+                        </div>
+                    </div>
+                    <div class="login_win_cont_qq_left2" style="display: none;">
+                        <div class="login_win_cont_qq_left2_div1">
+                            <div style="font-size: 20px;">快速安全登录</div>
+                            <div style="font-size: 14px;">请使用<a href="">QQ手机版</a>扫描二维码，<br>
+                                安全登录，防止盗号。</div>
+
+                            <img src="image/login_win/二维码.jpg" alt="" width="132px" height="132px">
+                        </div>
+
+                    </div>
+                    <div class="login_win_cont_qq_right">
+                        <div>
+                            <a href="">腾讯视频VIP</a>
+                            将获得以下权限：
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="login_win_cont_qq_right_checkall" checked>全选
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" checked>获得您的昵称、头像、性别
+                        </div>
+                        <span>授权后表明你已同意 <a href="">QQ登录服务协议</a></span>
+                    </div>
+                    <div class="login_win_cont_qq_botton1">
+                        <a href="">忘了密码？</a>|
+                        <a href="">注册新帐号</a>|
+                        <a href="">意见反馈</a>
+                    </div>
+                    <div class="login_win_cont_qq_botton2" style="display: none;">
+                        <a href="#" class="login_win_cont_qq_botton2_passwordregister">帐号密码登录</a>|
+                        <a href="">注册新帐号</a>|
+                        <a href="">意见反馈</a>
+                    </div>
+                </div>
+                <div class="login_win_cont_wx" style="display: none;">
+                    <span>安全登入，防止被盗</span>
+                    <img src="image/login_win/二维码.jpg" alt="" width="160px" height="160px">
+                </div>
+            </div>
+        </div>
+
+        <!-- 登入注册隐藏浮层------------------------------------- e -->
+        
+
+
+
+
+
+
+
+
+
+
+        <!-- footer--------------------------------------------- s -->
+        <div class="side_footer">
+            <div class="side_footer_contentinfo">
+                <div class="side_footer_contentinfo_channer1">
+                    <div class="side_footer_contentinfo_channer1_title">热门频道</div>
+                    <div class="side_footer_contentinfo_channer1_ul">
+                        <a href="">电视剧</a>
+                        <a href="">综艺</a>
+                        <a href="">电影 </a>
+                        <a href="">搞笑</a>
+                        <a href="">音乐</a>
+                        <a href="">娱乐</a>
+                        <a href="">动漫</a>
+                        <a href="">游戏</a>
+                        <a href="">VIP影院</a>
+                        <a href="">海外剧</a>
+                        <a href="">纪录片</a>
+                        <a href="">新闻</a>
+                        <a href="">生活</a>
+                        <a href="">体育</a>
+                    </div>
+                </div>
+                <div class="side_footer_contentinfo_channer2">
+                    <div class="side_footer_contentinfo_channer2_title">特殊推荐</div>
+                    <div class="side_footer_contentinfo_channer2_ul">
+                        <a href="">原创自媒体</a>
+                        <a href="">自制电影</a>
+                        <a href="">杀毒软件 </a>
+                    </div>
+                </div>
+                <div class="side_footer_contentinfo_channer3">
+                    <div class="side_footer_contentinfo_channer3_title">软件下载</div>
+                    <div class="side_footer_contentinfo_channer3_ul">
+                        <a href=""><img src="image/footer/手机版.png" alt="" width="50px" height="50px"> 手机版</a>
+                        <a href=""><img src="image/footer/windows版.png" alt="" width="50px" height="50px">wiondows版</a>
+                        <a href=""><img src="image/footer/Mac版.png" alt="" width="50px" height="50px">MAC版 </a>
+                        <a href=""><img src="image/footer/iPad版.png" alt="" width="50px" height="50px">iPad版 </a>
+                        <a href=""><img src="image/footer/TV版.png" alt="" width="50px" height="50px">TV版 </a>
+                    </div>
+                </div>
+                <div class="side_footer_contentinfo_channer4"> 
+                    <div class="side_footer_contentinfo_channer4_title">服务</div>
+                    <div class="side_footer_contentinfo_channer4_ul">
+                        <a href="">客服</a>
+                        <a href="">反馈</a>
+                        <a href="">侵权投诉 </a>
+                        <a href="">免广告合作 </a>
+                        <a href="">VIP采购 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="side_footer_footer">
+                <div class="side_footer_footer_copyright">
+                    <a href="">粤网文[2017]6138-1456号</a>|
+                    <a href="">网络视听许可证1904073号</a>|
+                    <a href="">增值电信业务经营许可证：粤B2-20090059</a>|
+                    <a href="">粤公网安备 44030002000001号</a>
+                </div>
+                <div class="side_footer_footer_menu">
+                    <a href="">关于腾讯</a>|
+                    <a href="">About Tencent</a>|
+                    <a href="">服务条款</a>| 
+                    <a href="">广告服务</a>|
+                    <a href="">腾讯招聘</a>|
+                    <a href="">客服中心</a>|
+                    <a href="">网站导航</a>
+                </div>
+                <div class="side_footer_footer_copyright">
+                    <a href="">Copyright © 1998 - 2020 Tencent. All Rights Reserved.</a>
+                </div>
+                <div class="side_footer_footer_copyright">
+                    <a href="">腾讯公司 版权所有(模仿腾讯视频网站)</a>
+                </div>
+            </div>
+            <div class="side_footer_supervision">
+                <img src="image/footer/1f68341597825237110.png" alt="" width="122px" height="50px">
+            </div>
+        </div>
+        <!-- footer--------------------------------------------- e -->
+    </div>
+
+</body>
+</html>

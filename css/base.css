@@ -1,0 +1,30 @@
+
+/**
+    此为基础样式表
+*/
+
+/*去除所有元素的边距*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*去除a标签的颜色和下划线*/
+a{
+    color: #000;
+    text-decoration: none;
+}
+/*li标签水平对齐*/
+li{
+    display: block;
+    float: left;/*左对齐*/
+    text-align: center;/*文本居中对齐*/
+}
+input{
+    border: none;
+}
+button{
+    border: none;
+}
+body{
+    background-color: white;
+}
